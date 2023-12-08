@@ -1,4 +1,4 @@
-package main.java.com.vnw.lib_math.util.numeros;
+package main.java.com.vnw.lib_math.core.aritimetica.numeros;
 
 public class RestoDivisao {
     public static int calcularResto(int dividendo, int divisor) {
