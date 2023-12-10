@@ -1,4 +1,4 @@
-package main.java.com.vnw.lib_math.core.geometria;
+package lib_math.geometria;
 
 public class CalculoPerimetro {
 

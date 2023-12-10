@@ -1,4 +1,4 @@
-package main.java.com.vnw.lib_math.core.aritimetica.numeros;
+package lib_math.aritimetica;
 
 public class DivisaoInteira {
     public static int dividir(int dividendo, int divisor) {

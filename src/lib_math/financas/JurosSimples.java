@@ -1,4 +1,4 @@
-package main.java.com.vnw.lib_math.core.financas;
+package lib_math.financas;
 
 public class JurosSimples {
     public static double calcularJurosSimples(double principal, double taxa, double tempo) {
@@ -9,4 +9,3 @@ public class JurosSimples {
         return principal + calcularJurosSimples(principal, taxa, tempo);
     }
 }
-

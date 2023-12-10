@@ -1,4 +1,4 @@
-package main.java.com.vnw.lib_math.core.financas;
+package lib_math.financas;
 
 
 public class JurosCompostos {

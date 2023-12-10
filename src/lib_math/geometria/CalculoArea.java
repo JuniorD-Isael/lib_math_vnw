@@ -1,4 +1,4 @@
-package main.java.com.vnw.lib_math.core.geometria;
+package lib_math.geometria;
 
 public class CalculoArea {
     private static final double PI = 3.14159;
