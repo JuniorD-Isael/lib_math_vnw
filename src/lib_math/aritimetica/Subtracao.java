@@ -1,27 +1,18 @@
 package lib_math.aritimetica;
 
 public class Subtracao {
-    public static double subtrair(double... valores) {
-        double resultado = valores[0];
-        for (int i = 1; i < valores.length; i++) {
-            resultado -= valores[i];
+    public static <T extends Number> T subtrair(T valor0, T... valores) {
+        double diferenca = valor0.doubleValue();
+        for (T valor : valores) {
+            diferenca -= valor.doubleValue();
         }
-        return resultado;
-    }
 
-    public static float subtrair(float... valores) {
-        float resultado = valores[0];
-        for (int i = 1; i < valores.length; i++) {
-            resultado -= valores[i];
+        if (valor0 instanceof Integer){
+            return (T) Integer.valueOf((int) diferenca);
+        } else if (valor0 instanceof Double){
+            return (T) Double.valueOf(diferenca);
+        } else {
+            throw new IllegalArgumentException("Tipos de dados não suportados");
         }
-        return resultado;
-    }
-
-    public static int subtrair(int... valores) {
-        int resultado = valores[0];
-        for (int i = 1; i < valores.length; i++) {
-            resultado -= valores[i];
-        }
-        return resultado;
     }
 }

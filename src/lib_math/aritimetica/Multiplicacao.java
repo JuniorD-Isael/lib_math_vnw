@@ -1,26 +1,17 @@
 package lib_math.aritimetica;
 
 public class Multiplicacao {
-    public static float multiplicar(float... valores) {
-        float produto = valores[0];
-        for(int i = 1 ; i < valores.length; i++){
-            produto *= valores[i];
+    public static <T extends Number> T multiplicar(T valor0, T... valores) {
+        double produto = valor0.doubleValue();
+        for (T valor : valores) {
+            produto *= valor.doubleValue();
         }
-        return produto;
+        if (valor0 instanceof Integer) {
+            return (T) Integer.valueOf((int) produto);
+        } else if (valor0 instanceof Double) {
+            return (T) Double.valueOf(produto);
+        } else {
+            throw new IllegalArgumentException("Tipos de dados não suportados");
+        }
     }
-
-    public static int multiplicar(int... valores) {
-        int produto = valores[0];
-        for(int i = 1 ; i < valores.length; i++){
-            produto *= valores[i];
-        }
-        return produto;
-    }
-     public static double multiplicar(double... valores) {
-        double produto = valores[0];
-        for(int i = 1 ; i < valores.length; i++){
-            produto *= valores[i];
-        }
-        return produto;
-     }
 }
