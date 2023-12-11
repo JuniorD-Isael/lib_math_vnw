@@ -13,7 +13,6 @@ public class Potenciacao {
         if (expoente < 0) {
             throw new IllegalArgumentException("Expoente negativo não é suportado nesta implementação");
         }
-
         double resultado = 1.0;
         for (int i = 0; i < expoente; i++) {
             resultado *= base;

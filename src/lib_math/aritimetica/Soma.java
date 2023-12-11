@@ -1,26 +1,17 @@
 package lib_math.aritimetica;
 
 public class Soma {
-    public static float somar(float... valores ){
-        float resultado = 0;
-        for(float valor : valores){
-            resultado += valor;
+    public static <T extends Number> T somar(T valor0, T... valores) {
+        double resultado = valor0.doubleValue();
+        for (T valor : valores) {
+            resultado += valor.doubleValue();
         }
-        return resultado;
+        if (valor0 instanceof Integer) {
+            return (T) Integer.valueOf((int) resultado);
+        } else if (valor0 instanceof Double) {
+            return (T) Double.valueOf(resultado);
+        } else {
+            throw new IllegalArgumentException("Tipos de dados não suportados");
+        }
     }
-
-    public static int somar(int... valores){
-        int resultado = 0;
-        for(int valor : valores){
-            resultado += valor;
-        }
-        return resultado;
-    }
-     public static double somar(double... valores) {
-        double resultado = 0;
-        for(double valor : valores){
-            resultado += valor;
-        }
-        return resultado;
-     }
 }

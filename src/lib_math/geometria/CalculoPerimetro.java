@@ -2,7 +2,7 @@ package lib_math.geometria;
 
 public class CalculoPerimetro {
 
-    private static final double PI = 3.14159;
+    private static final double PI = 3.14159; // Utilizando a aproximação de pi
 
     public static double calcularPerimetroRetangulo(double comprimento, double largura) {
         return 2 * (comprimento + largura);
@@ -17,6 +17,6 @@ public class CalculoPerimetro {
     }
 
     public static double calcularPerimetroCirculo(double raio) {
-        return 2 * PI * raio; // Utilizando a aproximação de pi
+        return 2 * PI * raio;
     }
 }
