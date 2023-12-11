@@ -1,8 +1,8 @@
-# Biblioteca de Operações Matemáticas e Geométricas em Java
+# Biblioteca de Operações Matemáticas, Financeiras e Geométricas em Java
 
 ## Descrição
 
-Este repositório contém uma biblioteca Java para operações matemáticas e cálculos geométricos básicos. A biblioteca foi projetada para oferecer métodos que abrangem operações aritméticas simples, cálculos de juros (simples e compostos) e cálculos geométricos de áreas, perímetros e volumes de diversas formas geométricas.
+Este repositório contém uma biblioteca Java para operações matemáticas, financeiras e cálculos geométricos básicos. A biblioteca foi projetada para oferecer métodos que abrangem operações aritméticas simples, cálculos de juros (simples e compostos) e cálculos geométricos de áreas, perímetros e volumes de diversas formas geométricas.
 
 Este projeto foi desenvolvido como desafio final do primeiro módulo do curso de Desenvolvimento Backend Java da Vai na Web.
 
@@ -24,8 +24,7 @@ Contém métodos para operações aritméticas básicas, tais como:
 ### Pacote `lib_math.financeiro`
 
 Fornece métodos para cálculos financeiros, incluindo:
-- Cálculo de juros simples
-- Cálculo de juros compostos
+- Cálculo de juros simples e compostos
 
 ### Pacote `lib_math.geometria`
 
@@ -48,15 +47,19 @@ Para utilizar esta biblioteca em seu projeto Java, siga os passos abaixo:
 
     Utilize os métodos fornecidos pelas classes importadas para realizar os cálculos desejados. Certifique-se de passar os parâmetros corretos de acordo com a operação desejada e o tipo de dado esperado.
 
-    Exemplo de uso para cálculo de área de um círculo:
+    Exemplo de uso para cálculo de juros compostos:
     ```java
-    import lib_math.geometria.CalculoArea;
+    import lib_math.financeiro.Juros;
 
     public class Main {
         public static void main(String[] args) {
-            double raio = 5.0;
-            double areaCirculo = CalculoArea.calcularAreaCirculo(raio);
-            System.out.println("Área do Círculo: " + areaCirculo);
+            double principal = 1000.0;
+            double taxa = 0.05;
+            int periodos = 3;
+            int vezesCapitalizacao = 2;
+
+            double jurosCompostos = Juros.calcularJurosCompostos(principal, taxa, periodos, vezesCapitalizacao);
+            System.out.println("Juros Compostos: " + jurosCompostos);
         }
     }
     ```
