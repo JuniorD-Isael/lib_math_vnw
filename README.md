@@ -21,7 +21,7 @@ Contém métodos para operações aritméticas básicas, tais como:
 - Soma
 - Subtração
 
-### Pacote `lib_math.financas`
+### Pacote `lib_math.financeiro`
 
 Fornece métodos para cálculos financeiros, incluindo:
 - Cálculo de juros simples
