@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este repositório contém uma biblioteca Java para operações matemáticas, financeiras e cálculos geométricos básicos. A biblioteca foi projetada para oferecer métodos que abrangem operações aritméticas simples, cálculos de juros (simples e compostos) e cálculos geométricos de áreas, perímetros e volumes de diversas formas geométricas.
+Este repositório contém uma biblioteca Java para operações matemáticas, financeiras e cálculos geométricos básicos. A biblioteca foi projetada para oferecer métodos que abrangem operações aritméticas simples, cálculos de juros (simples e compostos), cálculos de divisão e resto da divisão, além de cálculos geométricos de áreas, perímetros e volumes de diversas formas geométricas.
 
 Este projeto foi desenvolvido como desafio final do primeiro módulo do curso de Desenvolvimento Backend Java da Vai na Web.
 
@@ -17,7 +17,6 @@ Contém métodos para operações aritméticas básicas, tais como:
 - Multiplicação
 - Potenciação
 - Raiz
-- Resto da divisão
 - Soma
 - Subtração
 
@@ -47,19 +46,20 @@ Para utilizar esta biblioteca em seu projeto Java, siga os passos abaixo:
 
     Utilize os métodos fornecidos pelas classes importadas para realizar os cálculos desejados. Certifique-se de passar os parâmetros corretos de acordo com a operação desejada e o tipo de dado esperado.
 
-    Exemplo de uso para cálculo de juros compostos:
+    Exemplo de uso para cálculo de divisão e resto da divisão:
     ```java
-    import lib_math.financeiro.Juros;
+    import lib_math.aritimetica.Divisao;
 
     public class Main {
         public static void main(String[] args) {
-            double principal = 1000.0;
-            double taxa = 0.05;
-            int periodos = 3;
-            int vezesCapitalizacao = 2;
+            int dividendo = 10;
+            int divisor = 3;
 
-            double jurosCompostos = Juros.calcularJurosCompostos(principal, taxa, periodos, vezesCapitalizacao);
-            System.out.println("Juros Compostos: " + jurosCompostos);
+            int resultadoDivisao = Divisao.dividir(dividendo, divisor);
+            int resultadoRestoDivisao = Divisao.calcularResto(dividendo, divisor);
+
+            System.out.println("Resultado da Divisão: " + resultadoDivisao);
+            System.out.println("Resultado do Resto da Divisão: " + resultadoRestoDivisao);
         }
     }
     ```
